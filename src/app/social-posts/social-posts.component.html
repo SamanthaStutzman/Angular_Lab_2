@@ -1,0 +1,16 @@
+<h1>My Thoughts... on Doggos!</h1>
+
+<button (click)="showPostForm()">New Thought</button>
+
+<app-post-form [ngClass]="{'show' : show, 'not-show' : !show}" (submitted)="onSubmit($event)">
+    //form to input new thought
+</app-post-form>
+
+<div>
+    <h2>Recent Posts</h2>
+    <ul>
+        <app-post *ngFor="let post of thoughtArray ; let i = index" (deleted)="onDelete(i)" [post]="post">
+            //new post list goes here
+        </app-post>
+    </ul>
+</div>

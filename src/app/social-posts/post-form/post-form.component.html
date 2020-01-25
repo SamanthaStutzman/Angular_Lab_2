@@ -1,0 +1,8 @@
+<div>
+    <h2>Add A Post</h2>
+    <h3 class="text">Title</h3>
+    <input placeholder="Title" class="text" name="title" [(ngModel)]="getTitle"> 
+    <h3 class="text">Thought</h3>
+    <input placeholder="Thought" class="text" name="thought" [(ngModel)]="getThought">
+    <button (click)="submitPost(getTitle, getThought)">Add Post</button>
+</div>
